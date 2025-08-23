@@ -78,6 +78,7 @@ A análise exploratória foi realizada no notebook `Netflix.ipynb` e seguiu as s
 Para uma exploração mais dinâmica e interativa dos dados, foi criado um dashboard no Looker Studio.
 
 **[Acesse o Dashboard Interativo aqui](https://lookerstudio.google.com/reporting/4cd71552-dd9b-4872-95e9-da4e3930505f)**
+![Dashboard](dashboard.jpg)
 
 O dashboard permite a filtragem dos dados e oferece uma visão consolidada dos principais insights da análise.
 
