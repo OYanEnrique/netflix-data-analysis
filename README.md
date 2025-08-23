@@ -88,7 +88,7 @@ Para reproduzir a análise, siga os passos abaixo:
 
 1.  Clone o repositório:
     ```bash
-    git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
+    git clone [https://github.com/OYanEnrique/netflix-data-analysis.git](https://github.com/OYanEnrique/netflix-data-analysis.git)
     ```
 2.  Instale as dependências:
     ```bash
