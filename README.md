@@ -1,3 +1,5 @@
+[Read in english](README.en.md) 
+
 # Netflix: Por Trás das Cenas de um Catálogo de Sucesso (2008-2021)
 
 ![Dashboard Netflix](dashboard.jpg)
@@ -72,7 +74,7 @@ Quer seguir nossos passos e conduzir sua própria expedição? É simples:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/OYanEnrique/netflix-data-analysis.git](https://github.com/OYanEnrique/netflix-data-analysis.git)
+    git clone https://github.com/OYanEnrique/netflix-data-analysis.git
     ```
 2.  **Prepare seu arsenal (instale as dependências):**
     ```bash
