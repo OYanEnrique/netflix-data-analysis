@@ -1,100 +1,94 @@
-# Análise do Catálogo da Netflix
+# Netflix: Por Trás das Cenas de um Catálogo de Sucesso (2008-2021)
 
-Este projeto realiza uma análise exploratória dos dados do catálogo da Netflix (2008-2021), utilizando um conjunto de dados disponível no Kaggle. O objetivo é extrair insights sobre a composição do catálogo, as tendências de produção e as preferências de conteúdo. A análise foi desenvolvida em um notebook Jupyter e os resultados foram visualizados em um dashboard interativo no Looker Studio.
+![Dashboard Netflix](dashboard.jpg)
 
-## 📄 Índice
+## ❯ A Missão: Decodificando o Universo Netflix
 
-* [Sobre o Projeto](#sobre-o-projeto)
-* [Fonte dos Dados](#fonte-dos-dados)
-* [🛠️ Ferramentas Utilizadas](#ferramentas-utilizadas)
-* [🔍 Análise Exploratória de Dados (EDA)](#análise-exploratória-de-dados-eda)
-* [💡 Principais Insights](#principais-insights)
-* [📊 Dashboard Interativo](#dashboard-interativo)
-* [🚀 Como Utilizar](#como-utilizar)
+A Netflix é mais do que um serviço de streaming; é uma das maiores bibliotecas de conteúdo digital do mundo, um universo em constante expansão. Mas, por trás da interface familiar, que história os dados nos contam? Quais são as estratégias, tendências e segredos escondidos em milhares de títulos?
 
-## Sobre o Projeto
+Este projeto embarca em uma **jornada de análise de dados exploratória** para mergulhar fundo no catálogo da Netflix. Nossa missão é atuar como detetives de dados, usando Python e Looker Studio para desvendar os padrões que definiram o conteúdo da plataforma entre 2008 e 2021.
 
-Este projeto tem como objetivo principal aprofundar o conhecimento em análise de dados, utilizando Python e suas bibliotecas (Pandas, Matplotlib, Seaborn) para manipulação, análise e visualização de dados. Além disso, busca-se demonstrar a capacidade de comunicar os resultados de forma clara e interativa através de um dashboard no Looker Studio.
+## 🗺️ O Mapa da Jornada: Fonte dos Dados
 
-## Fonte dos Dados
+Toda grande expedição precisa de um mapa confiável. O nosso é um rico conjunto de dados obtido do Kaggle, detalhando cada filme e série na plataforma.
 
-O conjunto de dados utilizado neste projeto foi obtido do Kaggle: [Netflix Movies and TV Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download).
+* **Fonte:** [Netflix Movies and TV Shows (Kaggle)](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download)
+* **Período:** 2008 a 2021
 
-O dataset contém informações sobre filmes e séries de TV disponíveis na Netflix, incluindo:
+Este dataset foi nossa porta de entrada para entender a anatomia do catálogo, com informações cruciais como tipo, país de produção, ano de lançamento e gênero.
 
-* `show_id`: ID único para cada título
-* `type`: Tipo de conteúdo (Filme ou Série de TV)
-* `title`: Título do conteúdo
-* `director`: Diretor do conteúdo
-* `cast`: Elenco principal
-* `country`: País de produção
-* `date_added`: Data de adição à Netflix
-* `release_year`: Ano de lançamento
-* `rating`: Classificação etária
-* `duration`: Duração (em minutos para filmes, em temporadas para séries)
-* `listed_in`: Gêneros
-* `description`: Sinopse
+## 🛠️ O Arsenal do Explorador: Ferramentas Utilizadas
 
-## 🛠️ Ferramentas Utilizadas
+Para navegar neste mar de dados, fomos equipados com as melhores ferramentas do ecossistema de Data Science:
 
 * **Linguagem de Programação:** Python 3
-* **Bibliotecas Python:**
-    * Pandas: Para manipulação e análise de dados.
-    * Matplotlib e Seaborn: Para visualização de dados.
-* **Ambiente de Desenvolvimento:** Jupyter Notebook
-* **Visualização de Dados Interativa:** Looker Studio
+* **Mapa e Bússola (Manipulação de Dados):** Biblioteca Pandas
+* **Lentes de Aumento (Visualização):** Bibliotecas Matplotlib & Seaborn
+* **Diário de Bordo (Ambiente):** Jupyter Notebook
+* **Painel de Comando Interativo:** Looker Studio
 
-## 🔍 Análise Exploratória de Dados (EDA)
+## 🧭 O Diário da Expedição: Análise Exploratória (EDA)
 
-A análise exploratória foi realizada no notebook `Netflix.ipynb` e seguiu as seguintes etapas:
+Nossa jornada foi documentada no notebook `Netflix.ipynb` e seguiu um roteiro claro para garantir que nenhum detalhe fosse perdido.
 
-1.  **Carregamento e Inspeção Inicial dos Dados:** Leitura do arquivo `netflix_titles.csv` e verificação das primeiras linhas, tipos de dados e informações gerais do dataset.
-2.  **Limpeza e Pré-processamento dos Dados:**
-    * Tratamento de valores ausentes nas colunas `director`, `cast` e `country`, substituindo-os por "Unknown".
-    * Remoção de linhas com valores nulos nas colunas `date_added`, `duration` e `rating`.
-    * Conversão da coluna `date_added` para o formato de data e extração do ano e mês de adição.
-3.  **Análise e Visualização:**
-    * **Proporção de Filmes e Séries:** Análise da distribuição entre filmes e séries de TV no catálogo.
-    * **Top 10 Países Produtores:** Identificação dos países com maior número de produções na plataforma.
-    * **Evolução da Adição de Conteúdo ao Longo dos Anos:** Análise da tendência de adição de novos títulos anualmente.
+1.  **Primeiro Contato:** Carregamos o mapa (`netflix_titles.csv`) e fizemos uma inspeção inicial para entender o terreno, verificando a integridade e os tipos de dados.
+2.  **Limpando o Terreno:** Lidamos com os territórios desconhecidos do mapa, tratando valores ausentes para diretores, elenco e países como "Unknown". Removemos algumas trilhas sem saída (linhas com dados nulos essenciais) e ajustamos nossas bússolas, convertendo as datas para um formato legível.
+3.  **As Grandes Descobertas:** Com o mapa limpo, começamos a conectar os pontos, investigando a proporção de filmes e séries, identificando os principais centros de produção e mapeando a linha do tempo do crescimento do catálogo.
 
-## 💡 Principais Insights
+## 💡 As Revelações: Principais Insights Descobertos
 
-* **Predominância de Filmes:** O catálogo da Netflix é composto majoritariamente por filmes, representando aproximadamente **69.7%** do total, enquanto as séries de TV correspondem a **30.3%**.
-    
-    ![Proporção de Filmes e Séries](pizza.png)
-    
-* **Liderança dos Estados Unidos:** Os Estados Unidos são o maior produtor de conteúdo para a Netflix, seguidos por Índia e Reino Unido.
-    
-    ![Top 10 Países Produtores](bar.png)
-    
-* **Crescimento Exponencial:** A adição de novos conteúdos na plataforma teve um crescimento expressivo a partir de 2016, atingindo seu pico em 2019.
-    
-    ![Evolução da Adição de Conteúdo](line.png)
-    
+Após a exploração, três grandes verdades sobre o universo Netflix vieram à tona.
 
-## 📊 Dashboard Interativo
+### Revelação 1: O Reinado dos Filmes
 
-Para uma exploração mais dinâmica e interativa dos dados, foi criado um dashboard no Looker Studio.
+Descobrimos que o catálogo é um reino dominado por filmes. Embora as séries gerem grandes discussões, são os longas-metragens que constituem a maior parte do território.
 
-**[Acesse o Dashboard Interativo aqui](https://lookerstudio.google.com/reporting/4cd71552-dd9b-4872-95e9-da4e3930505f)**
-![Dashboard](dashboard.jpg)
+* **Filmes:** `69.7%` do catálogo
+* **Séries de TV:** `30.3%` do catálogo
 
-O dashboard permite a filtragem dos dados e oferece uma visão consolidada dos principais insights da análise.
+![Proporção de Filmes e Séries](pizza.png)
 
-## 🚀 Como Utilizar
+### Revelação 2: Os Titãs da Produção
 
-Para reproduzir a análise, siga os passos abaixo:
+A análise revelou uma clara superpotência na produção de conteúdo. Os Estados Unidos lideram de forma esmagadora, mas a presença de países como Índia e Reino Unido mostra a estratégia de investimento global da plataforma.
 
-1.  Clone o repositório:
+![Top 10 Países Produtores](bar.png)
+
+### Revelação 3: A Era da Expansão
+
+A linha do tempo do catálogo nos mostrou uma história de crescimento avassalador. A partir de 2016, a Netflix iniciou uma era de expansão agressiva, adicionando conteúdo a um ritmo sem precedentes, que atingiu seu auge em 2019.
+
+![Evolução da Adição de Conteúdo](line.png)
+
+## 📊 O Painel de Comando: Dashboard Interativo
+
+Para permitir que outros exploradores naveguem por estas descobertas, todos os insights foram consolidados em um painel de comando interativo no Looker Studio. Filtre, explore e tire suas próprias conclusões!
+
+**[>> Acesse o Dashboard Interativo aqui <<](https://lookerstudio.google.com/reporting/4cd71552-dd9b-4872-95e9-da4e3930505f)**
+
+## 🚀 Refaça a Jornada: Como Utilizar
+
+Quer seguir nossos passos e conduzir sua própria expedição? É simples:
+
+1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/OYanEnrique/netflix-data-analysis.git
+    git clone [https://github.com/OYanEnrique/netflix-data-analysis.git](https://github.com/OYanEnrique/netflix-data-analysis.git)
     ```
-2.  Instale as dependências:
+2.  **Prepare seu arsenal (instale as dependências):**
     ```bash
     pip install pandas matplotlib seaborn
     ```
-3.  Execute o Jupyter Notebook:
+3.  **Abra o diário de bordo:**
     ```bash
     jupyter notebook Netflix.ipynb
     ```
+
+    ---
+
+## 👨‍💻 O Arquiteto da Análise
+
+* **Yan Enrique**
+* **LinkedIn:** [https://www.linkedin.com/in/yanenrique/](https://www.linkedin.com/in/yanenrique/)
+* **GitHub:** [https://github.com/OYanEnrique](https://github.com/OYanEnrique)
+* **Landing page:** [https://yanenrique.carrd.co](https://yanenrique.carrd.co)
+---
