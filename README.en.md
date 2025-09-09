@@ -2,6 +2,8 @@
 
 # Netflix: Behind the Scenes of a Successful Catalog (2008-2021)
 
+![Dashboard Netflix](dashboard.jpg)
+
 ## ❯ The Mission: Decoding the Netflix Universe
 
 Netflix is more than a streaming service; it's one of the largest digital content libraries in the world, an ever-expanding universe. But behind the familiar interface, what story does the data tell us? What are the strategies, trends, and secrets hidden within thousands of titles?
@@ -46,13 +48,19 @@ We discovered that the catalog is a realm dominated by movies. Although series g
   * **Movies:** `69.7%` of the catalog
   * **TV Shows:** `30.3%` of the catalog
 
+![Proportion](pizza.png)
+
 ### Revelation 2: The Titans of Production
 
 The analysis revealed a clear superpower in content production. The United States leads overwhelmingly, but the presence of countries like India and the United Kingdom shows the platform's global investment strategy.
 
+![Top 10 Countries](bar.png)
+
 ### Revelation 3: The Era of Expansion
 
 The catalog's timeline showed us a story of overwhelming growth. Starting in 2016, Netflix began an era of aggressive expansion, adding content at an unprecedented rate, which peaked in 2019.
+
+![Content evolution](line.png)
 
 ## 📊 The Command Panel: Interactive Dashboard
 
